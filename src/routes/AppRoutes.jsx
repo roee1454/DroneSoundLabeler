@@ -10,7 +10,9 @@ import SignIn from "../components/SignIn";
 const AppRoutes = () => {
   const { userData } = useContext(UserContext);
   if (!userData) {
-    return <SignIn />;
+    return <Routes>
+        <Route index element={<SignIn />} />
+    </Routes>;
   }
   return (
     <div>
