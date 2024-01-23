@@ -43,7 +43,7 @@ const Excel = () => {
     const getDataToExcel = (DroneData) => {
         const allData = DroneData.map((item) => {
             const data =
-                { drone: item.drone, wind: item.wind, signal: item.signal, otherSounds: item.otherSounds, fileName: extractFileNameFromUrl(item.fileName),userName:item.userName }
+                { drone: item.drone, wind: item.wind, signal: item.signal, otherSounds: item.otherSounds, fileName: extractFileNameFromUrl(item.downloadURL),userName:item.userName }
                 ;
             return data;
         });
@@ -93,7 +93,7 @@ const Excel = () => {
                                 <td className="border-2 border-gray-500 py-2 text-center">{value.wind}</td>
                                 <td className="border-2 border-gray-500 py-2 text-center">{value.signal}</td>
                                 <td className="border-2 border-gray-500 py-2 text-center">{value.otherSounds}</td>
-                                <td className=" border-2 border-gray-500 py-2  text-center max-w-[60px] overflow-hidden whitespace-nowrap overflow-ellipsis">{extractFileNameFromUrl(value.fileName)}</td>
+                                <td className=" border-2 border-gray-500 py-2  text-center max-w-[60px] overflow-hidden whitespace-nowrap overflow-ellipsis">{extractFileNameFromUrl(value.downloadURL)}</td>
                             </tr>
                         ))}
                     </tbody>
