@@ -6,4 +6,3 @@ The label results were submitted to a machine learining model and helped speed u
 #### Tech stack used:
 - React JS
 - Firebase
-- GCP
